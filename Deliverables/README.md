@@ -51,26 +51,8 @@ print(os.listdir())# we need to know the filename
 usvids = pd.read_csv('gdrive/My Drive/Data Science/JupyterNotebooks/DataSets/youtube-trend-with-subscriber/USvideos_modified.csv', index_col='video_id')
 # let's see the columns
 usvids.head(10)
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -366,8 +348,6 @@ usvids.head(10)
   </tbody>
 </table>
 <p>10 rows × 22 columns</p>
-</div>
-
 
 
 
@@ -463,23 +443,6 @@ For the most part the data is complete. Only a small fraction of videos have no 
 usvids.describe()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -630,8 +593,6 @@ usvids.describe()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 **Observations from Statistical Description:**
@@ -743,27 +704,6 @@ The most watched videos also had the most likes. This makes sense because people
 usvids.groupby('ratings_disabled').describe()[['views','tag_appeared_in_title_count','trend_day_count','trend.publish.diff','comment_count']]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead tr th {
-        text-align: left;
-    }
-    
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -875,8 +815,6 @@ usvids.groupby('ratings_disabled').describe()[['views','tag_appeared_in_title_co
   </tbody>
 </table>
 <p>2 rows × 40 columns</p>
-</div>
-
 
 
 
@@ -886,27 +824,6 @@ usvids.groupby('ratings_disabled').describe()[['views','tag_appeared_in_title_co
 usvids.groupby('comments_disabled').describe()[['views','likes','dislikes','tag_appeared_in_title_count','trend_day_count','trend.publish.diff']]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead tr th {
-        text-align: left;
-    }
-    
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -1018,8 +935,6 @@ usvids.groupby('comments_disabled').describe()[['views','likes','dislikes','tag_
   </tbody>
 </table>
 <p>2 rows × 48 columns</p>
-</div>
-
 
 
 **Observations:** 
@@ -1350,23 +1265,6 @@ cleantagsdf['views'] = tagsviews
 cleantagsdf.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1403,8 +1301,6 @@ cleantagsdf.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
@@ -1424,23 +1320,6 @@ tagsviewsdf = pd.DataFrame(tagsviewsdf)
 tagsviewsdf.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1471,8 +1350,6 @@ tagsviewsdf.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
@@ -1489,23 +1366,6 @@ for unique in uniquetagslist:
 tagsviewsdf.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1536,8 +1396,6 @@ tagsviewsdf.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
